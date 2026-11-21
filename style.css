@@ -1,0 +1,143 @@
+/* ------ Reset básico ------ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background-color: #0a0a0f;
+  color: #f2f2f2;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+/* ------ Estrutura principal ------ */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+  max-width: 1000px;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.hero-content {
+  flex: 1;
+  min-width: 280px;
+}
+
+/* ------ Badge de status ------ */
+.badge {
+  display: inline-block;
+  background-color: rgba(81, 138, 78, 0.12);
+  color: #35ed09;
+  font-size: 13px;
+  padding: 6px 14px;
+  border-radius: 20px;
+  margin-bottom: 24px;
+}
+
+/* ------ Títulos ------ */
+h1 {
+  font-size: 42px;
+  line-height: 1.2;
+  margin-bottom: 8px;
+}
+
+.highlight {
+  color: #1852e4;
+}
+
+h2 {
+  font-size: 30px;
+  color: #d0d0d0;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.description {
+  color: #c6c3c3;
+  font-size: 16px;
+  line-height: 1.6;
+  max-width: 420px;
+  margin-bottom: 32px;
+}
+
+/* ------ Botões ------ */
+.buttons {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  text-decoration: none;
+  padding: 14px 26px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+.btn-primary {
+  background-color: #ffffff;
+  color: #0a0a0f;
+}
+
+.btn-pdf {
+  background-color: #E10931FF;
+  color: #f2f2f2;
+  border: 1px solid #3a3a45;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: #f2f2f2;
+  border: 1px solid #3a3a45;
+}
+
+/* ------ Parte visual (círculo com brilho) ------ */
+.hero-visual {
+  flex: 1;
+  min-width: 260px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.glow-circle {
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, #7c6cf6, #2a1f5c 60%, transparent 80%);
+  filter: blur(10px);
+  opacity: 0.85;
+}
+
+/* ------ Responsivo ------ */
+@media (max-width: 700px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .description {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .buttons {
+    justify-content: center;
+  }
+}
